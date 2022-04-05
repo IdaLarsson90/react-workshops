@@ -1,27 +1,41 @@
 
 import './App.css';
+import { useState } from 'react'
 
 import TodoItem from './components/TodoItem';
+import AddTodo from './components/AddTodo';
 
 function App() {
-  const todos = [
+  const [todos, setTodos] = useState ([
     { id: 0, task: 'köp kaffe'},
     { id: 1, task: 'köp kaka'},
     { id: 2, task: 'brygg kaffe'},
     { id: 3, task: 'dricka kaffe'},
     { id: 4, task: "smör"}
-  ];
+  ]);
 
   const todoItems = todos.map ((todo) => {
     return <TodoItem task= {todo.task} key={ todo.id } />
   });
 
+  function addTodo (todoText) {
+    const newTodo = {
+      id: todos.length,
+      task: todoText
+    }
+
+    const todoArrayCopy = [...todos];
+    
+    todoArrayCopy.push(newTodo);
+    setTodos(todoArrayCopy);
+  }
 
   return (
     <div className="App">
       <ul>
-      {todoItems}
+        {todoItems}
       </ul>
+      <AddTodo addTodo = { addTodo } />
     </div>
   );
 }
