@@ -1,16 +1,22 @@
+
+import { useState } from 'react'
+
 function RandomInsult (props) {
-    const {insult, play} = props;
- 
+    
+    const {array}  = props;
+    console.log(array);
+    const [randomInsult, setRandomInsult] = useState([]);
+
     function randomizeInsult () {
-        let rndNumber = Math.floor(Math.random() * 10);
-        return rndNumber;
+        let rndNumber = Math.floor(Math.random() * array.length);
+        console.log(array[rndNumber]);
+        setRandomInsult(array[rndNumber]);
     }
-
-
     return(
         <article> 
-            <h2>{insult}</h2>
-            <button>Random insult</button>
+            
+            {/* <button onClick={ randomInsult }>Random insult</button>
+       <h1>{  randomInsult.insult} - {randomInsult.play} </h1> */}
         </article>
     )
 }

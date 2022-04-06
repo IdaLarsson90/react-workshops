@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import EnterName from './components/EnterName'
+import EnterName from '.components/EnterName'
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -19,9 +19,10 @@ function App() {
       <button onClick={ decrese }> Minska med 1</button>
       <p> Räknare: { counter }</p>
 
-      <EnterName/>
+      <EnterName />
     </div>
   );
 }
 
 export default App;
+
