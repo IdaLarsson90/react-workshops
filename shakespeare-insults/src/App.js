@@ -2,6 +2,7 @@
 import './App.css';
 import ShowAll from './components/ShowAllInsults'
 import RandomInsult from './components/RandomInsult'
+import AddInsult from './components/AddInsult';
 
 import { useState } from 'react'
 
@@ -19,22 +20,27 @@ function App() {
     {insult: 'He hath eaten me out of house and home; he hath put all substance into that fat belly of his.', play: 'Henry IV, Part 2' },
     {insult: 'Out, you green-sickness carrion! Out, you baggage! You tallow-face!', play: 'Romeo and Juliet' }
   ]);
+  
 
+  console.log(insults)
 
-
+  // function addItem (inputValue) {
+    
+  //   setInsults(prevState => { 
+  //     console.log(insults)
+      
+  //     return [...prevState, inputValue]});
+  // }
 
   const InsultShowAll = insults.map((insult) => {
     return <ShowAll insult = {insult.insult} play = {insult.play} />
   });
 
-
-
-
   return (
     <div className="App">
        {InsultShowAll}
-       <RandomInsult array = {insults}/>
-
+       <RandomInsult array = { insults } />
+        <AddInsult array = { insults } setInsults={setInsults} />
     </div>
   );
 }

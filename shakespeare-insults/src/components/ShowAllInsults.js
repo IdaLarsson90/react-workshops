@@ -1,6 +1,8 @@
 function ShowAllInsults (props){
     const {insult, play} = props;
     
+
+
     return (
         <article>
             <ul>
