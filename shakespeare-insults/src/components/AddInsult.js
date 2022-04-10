@@ -27,7 +27,7 @@ export default function AddInsult (props) {
         <form onSubmit={submit}>
             <input name='insult' type="text" placeholder='Insult' value={inputValue.insult} onChange={ handleChange } /> 
             <input name='play' type="text" placeholder='Play' value={inputValue.play} onChange={ handleChange } /> 
-            <button className='addBtn' onClick={submit} type="button" >Add Insult</button>
+            <button className='addBtn' >Add Insult</button>
         </form>
     )
 }
