@@ -14,8 +14,6 @@ function App() {
     year:"" }
   ]);
 
-
-
   return (
     <div className="App">
       <SearchMovies setMovies = {setMovies} searchTitle = {searchTitle} setInputValue= {setInputValue} />
