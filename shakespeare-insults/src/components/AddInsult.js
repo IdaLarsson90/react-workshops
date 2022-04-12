@@ -31,36 +31,3 @@ export default function AddInsult (props) {
         </form>
     )
 }
-
-// const {insults, addItem} = props;
-
-    // let insultInput="";
-    // let playInput = "";
-
-
-
-    // function getInsultValue (event) {
-    //     const { name, value} = event.target;
-    //     console.log(name);
-    //     console.log(value);
-    //     insultInput = value;
-        
-    //     const newInsult = {
-    //         insult: insultInput, 
-    //         play: playInput
-    //     }
-        
-    // }
-    // function getPlayValue (event) {
-    //     const { name, value} = event.target;
-    //     console.log(name);
-    //     console.log(value);
-    //     insultInput = value;
-    //     playInput = value;
-
-    //     const newInsult = {
-    //         insult: insultInput, 
-    //         play: playInput
-    //     }
-    // }
-   
