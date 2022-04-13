@@ -27,12 +27,12 @@ function handleChange (event) {
       <header>
         <h1>Välkommen!</h1>
       </header>
+      
       <Routes>
-        <Route path='/' element={ <Registration handleChange= {handleChange} inputValue = {inputValue} />} />
-        <Route path='/account' element={ <Account />} />
+        <Route path='/' element={ <Registration handleChange= {handleChange} />} />
+        <Route path='/account' element={ <Account inputValue = {inputValue}  handleChange= {handleChange} />} />
         <Route path='*' element={ <Error />} />
       </Routes>
-     
     </div>
   );
 }

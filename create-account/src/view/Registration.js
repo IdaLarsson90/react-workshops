@@ -8,7 +8,7 @@ export default function Registration (props) {
     const navigate = useNavigate();
     
     function signUp () {
-        console.log(inputValue)
+        
         navigate('/account')
     }
 
