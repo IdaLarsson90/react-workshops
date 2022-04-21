@@ -11,16 +11,16 @@ function App() {
     name: "",
     email: "",
     password:""
-});
+  });
 
-function handleChange (event) {
+  function handleChange (event) {
     setInputValue((prevInputValue) => {
         return {
             ...prevInputValue, 
             [event.target.name]: event.target.value
         }
     })
-}
+  }
 
   return (
     <div className="App">

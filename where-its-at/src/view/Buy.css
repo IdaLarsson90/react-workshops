@@ -1,0 +1,73 @@
+.buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 310px;
+}
+
+.buy__heading {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 23px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.buy__artist {
+    font-family: 'Sansita', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #F56B9A;
+}
+.buy__time {
+    display: flex;
+    justify-content: center;
+    
+}
+.buy__time p {
+    color: #37AEAB;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    font-family: 'Fira Sans';
+}
+.buy__venue {
+    display: flex;
+}
+.buy__venue p {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.buy__price {
+    margin-top: 7rem;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px #F56B9A;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+.buy__button {
+    margin-top: 6rem;
+    width: 100%;
+    background: #37AEAB;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    border: #37AEAB 1px solid;
+    color: #fff;
+    padding: 1.5rem;
+}

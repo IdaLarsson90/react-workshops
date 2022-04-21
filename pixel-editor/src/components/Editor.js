@@ -1,25 +1,39 @@
 import { useState } from 'react';
 import { TwitterPicker } from 'react-color';
-import DrawingPanel from './DrawingPanel';
+import DrawingPanel from './DrawingPanel'
 import './Editor.css'
 
 
-function Editor(props) {
-    const {sizeOfPanel} = props
-    const [pixelColor, setPixelColor] = useState("#9900EF"); // State som håller den valda färgen
-    
-   
+function Editor() {
+    const [panelWidth, setPanelWidth] = useState(16);
+    const [panelHeight, setPanelHeight] = useState(16);
+    const [config, setConfig] = useState(true);
+    const [pixelColor, setPixelColor] = useState('#000');
+
 
     function selectPixelColor(color) {
-        console.log(color); // color innehåller den färgen som användaren valde i color picker
-        setPixelColor(color.hex); // Sparar färgen i vårt state
+        console.log(color.hex)
+        setPixelColor(color.hex);
+        
     }
-
+    function initializeDrawing (event) {
+        event.preventDefault();
+        setConfig(!config);
+    }
+   
     return (
-        <div className='editor'>
-            <TwitterPicker color={ pixelColor } onChangeComplete={ selectPixelColor } />
-            <DrawingPanel sizeOfPanel = {sizeOfPanel} />
-        </div>
+        <section className='editor'>
+            <h1>Pixel editor</h1>
+            {config && <h2>Ange dimensioner</h2>}
+            {config && 
+            <form >
+                <input name='rows' type="text" defaultValue={panelWidth} onKeyUp={ (event) =>{setPanelWidth(parseInt(event.target.value))}} /> 
+                <input name='columns' type="text" defaultValue={panelHeight} onKeyUp={ (event) =>{setPanelHeight(parseInt(event.target.value))}} /> 
+                <button onClick={initializeDrawing} className ='addBtn'> Börja rita </button>
+            </form> }
+            {!config && <TwitterPicker onChangeComplete={selectPixelColor}/>}
+            { !config && <DrawingPanel width= {panelWidth} height={panelHeight} color={pixelColor} />}
+        </section>
     )
 }
 

@@ -1,0 +1,23 @@
+.cards {
+    display: grid;
+    grid-auto-rows: 2.5rem;
+    
+}
+
+
+
+.card:nth-child(3) {
+    display: block;
+}
+
+/*.card:nth-child(2) {
+    background-color: #222222;
+}
+
+.card:nth-child(3) {
+    background-color: #8B58F9;
+}
+
+.card:nth-child(4) {
+    background-color: #F33355;
+} */

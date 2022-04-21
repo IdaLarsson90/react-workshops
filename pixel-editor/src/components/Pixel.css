@@ -2,7 +2,9 @@
     height: 1.5rem;
     width: 1.5rem;
     border: 1px #cdcdcd solid;
+    background-color: #000;
 }
 .pixel:hover {
     cursor: pointer;
+    background-color: #000;
 }

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "artist": "Lasse-Stefanz",
+        "venue": "Kjell Härnqvistsalen",
+        "from": "19.00",
+        "to": "21.00",
+        "date": "21 Mar",
+        "price": "350 sek"
+    },
+    {
+        "id": 2,
+        "artist": "Pelle trubadur",
+        "venue": "Pubelipuben",
+        "from": "22.00",
+        "to": "00.00",
+        "date": "29 Mar",
+        "price": "110 sek"
+    },
+    {
+        "id": 3,
+        "artist": "Kajsas kör",
+        "venue": "Götaplatsen",
+        "from": "15.00",
+        "to": "16.00",
+        "date": "10 Apr",
+        "price": "99 sek"
+    },
+    {
+        "id": 4,
+        "artist": "Klubb Untz",
+        "venue": "Din favoritkällare",
+        "from": "12.00",
+        "to": "du tröttnar",
+        "date": "17 Apr",
+        "price": "150 sek" 
+    }
+]

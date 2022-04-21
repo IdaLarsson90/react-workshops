@@ -1,0 +1,25 @@
+.button {
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-family: 'PT Mono', monospace;
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    position: fixed;
+
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    
+}
+.button--light {
+    background-color: #fff;
+}
+
+.button--dark {
+    background-color: #000000;
+    color: #fff;
+}

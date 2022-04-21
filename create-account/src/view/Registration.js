@@ -1,18 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 
-
 import './Registration.css'
 
 export default function Registration (props) {
-    const {handleChange, inputValue} = props;
+    const {handleChange} = props;
     const navigate = useNavigate();
     
     function signUp () {
-        
         navigate('/account')
     }
-
-   
 
     return (
         <section>

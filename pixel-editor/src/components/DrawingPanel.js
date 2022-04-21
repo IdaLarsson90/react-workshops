@@ -1,25 +1,20 @@
 import './DrawingPanel.css'
 import Row from './Row'
-import { useState } from 'react';
-
 
 export default function DrawingPanel (props) {
 
-    const { sizeOfPanel} = props;
-    console.log(sizeOfPanel);
-    
-    function createRows () {
-        for (let index = 0; index < 5; index++) {
-            return (
-                <Row />
-            )
-        }
-    }
-    
+    const { width, height, color} = props;
+   
 
+    const pixelRows = [...Array(height).keys()];
+    const pixelItems = pixelRows.map ((pixelRow) =>{
+        return <Row  width={width} key={pixelRow} color={color}/>
+    })
+    
     return (
-        <div className="drawingPanel">
-            { createRows }
-        </div>
+        <section className="drawingPanel">
+            {pixelItems}
+            
+        </section>
     )
 }

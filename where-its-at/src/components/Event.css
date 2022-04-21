@@ -1,0 +1,58 @@
+.event {
+    display: flex;
+    margin: 1rem ;
+    width: 100%;
+    justify-content: space-between;
+}
+.event:hover {
+    cursor: pointer;
+}
+.date {
+    border: 1px #fff solid;
+    padding: 1rem;
+    margin-right: 1rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+}
+.eventInfo {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+.eventInfo__artist {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-shadow: 1px 1px 0px #F56B9A;
+}
+
+.eventInfo__venue {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.eventInfo__time {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D0D0D0;
+}
+.eventInfo__price {
+    color: #37AEAB;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+}
