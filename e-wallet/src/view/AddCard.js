@@ -14,8 +14,7 @@ export default function AddCard (props) {
         vendor: "null", 
         id: "0"
       }
-    //   const cardColor = `linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0`;
-      
+     
     return(
     <section className='addCard'>
         <Top  heading="Add a new bank card" subHeading = "new card"/>

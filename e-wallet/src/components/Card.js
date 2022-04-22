@@ -13,8 +13,6 @@ export default function Card ( props) {
     const [cardColor, setCardColor] = useState("");
     
     const [logo, setLogo] = useState(bitcoinLogo);
-    const [activeCard, setActiveCard] = useState("");
-    
    
     useEffect(()=> { 
         if(cardInfo.vendor == 'ninjaBank') {
@@ -29,8 +27,7 @@ export default function Card ( props) {
         } else if(cardInfo.vendor == 'evilCorp') {
             setCardColor(`linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355`)
             setLogo(evilLogo)
-        }
-        else {
+        } else {
             setCardColor(`linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0`)
             setLogo(bitcoinLogo)
         }
@@ -39,7 +36,7 @@ export default function Card ( props) {
    
 
     return(
-        <article className="card " style={{background: cardColor}} onClick={activateCard}>
+        <article className="card " style={{background: cardColor}} onClick={() => { activateCard(cardInfo) }}>
             <section className='card__icons'>
                 <img className='card__chip' src={cardInfo.vendor == "bitcoin" || cardInfo.vendor == "null" ? darkChip : lightChip} alt="chip-icon" />
                 <img className='card__logo' src={logo} alt="logo" />

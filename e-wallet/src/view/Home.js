@@ -5,30 +5,21 @@ import { useNavigate } from 'react-router-dom'
 
 import './Home.css'
 import CardStack from '../components/CardStack'
-import { useState } from 'react'
+
 
 export default function Home (props) {
-    const {cardsArr} = props
+    const {cardsArr, cards, activeCard} = props
     const navigate = useNavigate();
 
-    function activateCard() {
-        // console.log(cardInfo.id)
-        const cards = cardsArr.map ((card) => {
+ 
+ 
 
-            return card
-        })
-        console.log(cards)
-
-        cardsArr.forEach(card => {
-            console.log(card)
-        });
-    }
-   console.log(cardsArr)
+   console.log(activeCard)
     return(
         <section className='home'>
             <Top heading="E-wallet" subHeading = "active card"/>
-            <Card />
-            <CardStack cardsArr={ cardsArr } activateCard={activateCard}  />
+            <Card cardInfo = {activeCard} />
+            <CardStack cardsArr={ cardsArr } cards={cards} />
             <button className='button button--light' onClick={()=> {navigate('/addCard')}}>Add a new card</button>
         </section>
     )

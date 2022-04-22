@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Home from './view/Home';
 import AddCard from './view/AddCard'
+import Card from './components/Card';
 
 function App() {
   const navigate = useNavigate();
@@ -19,9 +20,20 @@ function App() {
   const [cardID, setCardID] = useState("")
   const [vendor, setVendor] = useState("")
   const [ccv, setCcv] = useState ("")
-
+  const [activeCard, setActiveCard] = useState({});
 
   const [cardsArr, setCardsArr] = useState([]);
+
+  const cards = cardsArr.map ((card) => {
+    return <Card cardInfo= { card } activateCard={activateCard} key= {card.id} />
+})
+
+
+function activateCard(cardInfo) {
+  console.log(cardInfo)
+  setActiveCard(cardInfo)
+  console.log(cardsArr[cardInfo.id])
+}
 
 function handleChange (event) {
  
@@ -57,7 +69,6 @@ function handleChange (event) {
 
 }
 
-
 function addCard (event) {
   event.preventDefault();
   const cardsArrCopy = [...cardsArr];
@@ -78,7 +89,7 @@ function addCard (event) {
   return (
     <div className="App">
       <Routes>
-        <Route path = '/' element = { <Home cardsArr={cardsArr}  /> } />
+        <Route path = '/' element = { <Home cardsArr={cardsArr} cards={cards} activeCard= {activeCard} /> } />
         <Route path = '/addCard' element = { <AddCard handleChange={ handleChange } addCard={addCard}  /> } />
       </Routes>
     </div>
