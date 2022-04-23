@@ -4,8 +4,6 @@ import './CardForm.css'
 export default function CardForm (props) {
 
     const {handleChange, addCard} = props
-   
-
     return (
         <form>
             <label htmlFor="cardNumber">Card number</label>

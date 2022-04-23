@@ -1,10 +1,7 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-
-
 
 import Home from './view/Home';
 import AddCard from './view/AddCard'
@@ -23,6 +20,22 @@ function App() {
   const [activeCard, setActiveCard] = useState({});
 
   const [cardsArr, setCardsArr] = useState([]);
+  console.log(cardsArr)
+
+  useEffect( ()=>{
+    const localSt = localStorage.getItem('cardsArr')
+    const data = JSON.parse(localSt)
+    
+    setCardsArr(data)
+    console.log(cardsArr)
+  }, []);
+
+  // useEffect( ()=> {
+  //   console.log(cardsArr)
+    
+  // }, [cardsArr])
+
+  console.log(cardsArr)
 
   const cards = cardsArr.map ((card) => {
     return <Card cardInfo= { card } activateCard={activateCard} key= {card.id} />
@@ -30,9 +43,7 @@ function App() {
 
 
 function activateCard(cardInfo) {
-  console.log(cardInfo)
   setActiveCard(cardInfo)
-  console.log(cardsArr[cardInfo.id])
 }
 
 function handleChange (event) {
@@ -82,6 +93,7 @@ function addCard (event) {
     id: cardsArr.length,
   }
   cardsArrCopy.push(newCard);
+  localStorage.setItem('cardsArr', JSON.stringify(cardsArrCopy))
   setCardsArr(cardsArrCopy);
   navigate('/');
 }

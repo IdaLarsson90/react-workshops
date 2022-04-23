@@ -14,7 +14,6 @@ export default function Home (props) {
  
  
 
-   console.log(activeCard)
     return(
         <section className='home'>
             <Top heading="E-wallet" subHeading = "active card"/>
