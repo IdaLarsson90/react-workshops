@@ -1,8 +1,7 @@
-import Card from "./Card"
 import './CardStack.css'
 
 export default function CardStack (props) {
-    const {cardsArr, activateCard, cards} = props;
+    const {cards} = props;
 
     return (
         <section className="cards">

@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import './Top.css';
 
 export default function Top(props) {

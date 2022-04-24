@@ -1,17 +1,16 @@
 import './Card.css'
-import darkChip from '../assets/chip-dark.svg'
-import lightChip from '../assets/chip-light.svg'
 import { useEffect, useState } from 'react';
 
+import darkChip from '../assets/chip-dark.svg'
+import lightChip from '../assets/chip-light.svg'
 import bitcoinLogo from '../assets/vendor-bitcoin.svg'
 import ninjaBankLogo from '../assets/vendor-ninja.svg'
 import evilLogo from '../assets/vendor-evil.svg'
 import blockChainLogo from '../assets/vendor-blockchain.svg'
 
-export default function Card ( props) {
-    const {cardInfo, activateCard } = props;
+export default function Card ( props ) {
+    const {cardInfo, activateCard, index } = props;
     const [cardColor, setCardColor] = useState("");
-    
     const [logo, setLogo] = useState(bitcoinLogo);
    
     useEffect(()=> { 
@@ -31,12 +30,10 @@ export default function Card ( props) {
             setCardColor(`linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0`)
             setLogo(bitcoinLogo)
         }
-        }, [cardInfo.vendor]);
+    }, [cardInfo.vendor]);
        
-   
-
     return(
-        <article className="card " style={{background: cardColor}} onClick={() => { activateCard(cardInfo) }}>
+        <article className="card " style={{background: cardColor}} onClick={() => { activateCard(cardInfo, index) }}>
             <section className='card__icons'>
                 <img className='card__chip' src={cardInfo.vendor == "bitcoin" || cardInfo.vendor == "null" ? darkChip : lightChip} alt="chip-icon" />
                 <img className='card__logo' src={logo} alt="logo" />
@@ -51,7 +48,5 @@ export default function Card ( props) {
                 <p className='card__info' style={cardInfo.vendor == "bitcoin" || cardInfo.vendor == "null" ? {color: '#000'} : {color: '#fff'}}> { cardInfo.valid }</p>
             </section>
         </article> 
-       
-        
     )
 }
