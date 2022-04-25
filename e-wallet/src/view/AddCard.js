@@ -1,9 +1,9 @@
-import Top from '../components/Top'
-import Card from '../components/Card'
-import CardForm from '../components/CardForm'
+import Top from '../components/Top';
+import Card from '../components/Card';
+import CardForm from '../components/CardForm';
 
 export default function AddCard (props) {
-    const {handleChange, addCard, emptyCard} = props
+    const {handleChange, addCard, emptyCard} = props;
          
     return(
     <section className='addCard'>

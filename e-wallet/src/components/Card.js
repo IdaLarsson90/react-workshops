@@ -1,12 +1,12 @@
-import './Card.css'
+import './Card.css';
 import { useEffect, useState } from 'react';
 
-import darkChip from '../assets/chip-dark.svg'
-import lightChip from '../assets/chip-light.svg'
-import bitcoinLogo from '../assets/vendor-bitcoin.svg'
-import ninjaBankLogo from '../assets/vendor-ninja.svg'
-import evilLogo from '../assets/vendor-evil.svg'
-import blockChainLogo from '../assets/vendor-blockchain.svg'
+import darkChip from '../assets/chip-dark.svg';
+import lightChip from '../assets/chip-light.svg';
+import bitcoinLogo from '../assets/vendor-bitcoin.svg';
+import ninjaBankLogo from '../assets/vendor-ninja.svg';
+import evilLogo from '../assets/vendor-evil.svg';
+import blockChainLogo from '../assets/vendor-blockchain.svg';
 
 export default function Card ( props ) {
     const {cardInfo, activateCard, index } = props;
@@ -16,19 +16,19 @@ export default function Card ( props ) {
     useEffect(()=> { 
         if(cardInfo.vendor == 'ninjaBank') {
             setCardColor(`linear-gradient(248.3deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #222222`);
-            setLogo(ninjaBankLogo)
+            setLogo(ninjaBankLogo);
         } else if(cardInfo.vendor == 'bitcoin') {
             setCardColor(`linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%), #FFAE34`);
-            setLogo(bitcoinLogo)
+            setLogo(bitcoinLogo);
         } else if(cardInfo.vendor == 'blockChain') {
-            setCardColor(`linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9`)
-            setLogo(blockChainLogo)
+            setCardColor(`linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9`);
+            setLogo(blockChainLogo);
         } else if(cardInfo.vendor == 'evilCorp') {
-            setCardColor(`linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355`)
-            setLogo(evilLogo)
+            setCardColor(`linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355`);
+            setLogo(evilLogo);
         } else {
-            setCardColor(`linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0`)
-            setLogo(bitcoinLogo)
+            setCardColor(`linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0`);
+            setLogo(bitcoinLogo);
         }
     }, [cardInfo.vendor]);
        

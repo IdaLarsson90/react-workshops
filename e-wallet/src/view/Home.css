@@ -8,12 +8,11 @@
     font-weight: 700;
     border: 1px solid #000000;
     border-radius: 8px;
+    
     position: fixed;
-
     left: 1.5rem;
     right: 1.5rem;
     bottom: 1.5rem;
-    
 }
 .button--light {
     background-color: #fff;
@@ -22,4 +21,18 @@
 .button--dark {
     background-color: #000000;
     color: #fff;
+}
+
+.button--remove {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'PT Mono', monospace;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #ad2929;
+    color: #fff;
+
 }
